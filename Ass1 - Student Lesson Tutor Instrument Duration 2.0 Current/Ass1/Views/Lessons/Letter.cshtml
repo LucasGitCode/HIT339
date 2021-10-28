@@ -1,0 +1,78 @@
+﻿@model Ass1.Models.Letter
+
+@{
+    ViewData["Title"] = "Letter";
+}
+
+<h1>Send</h1>
+
+<h4>Letter</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Letter">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <p>Dear <label><select asp-for="StudentsId" class="form-control" asp-items="ViewBag.StudentsId"></select></label></p>
+            </div>
+        </form>
+    </div>
+</div>
+<p>
+    Welcome to all existing students and new students. <label><select asp-for="Year" class="form-control" asp-items="ViewBag.Year"></select></label> will commence on <label><input asp-for="Date" class="form-control" /></label>.
+    <br>
+    Please ensure your payment is finalised by <label><input asp-for="Date" class="form-control" /></label>.
+    If a student is no longer attending lessons, please email the CYCM to be removed off the email list.
+</p>
+<p>
+    If paying by Bank Transfer- EFT, please forward a copy of your payment to the office, to follow up
+    and allocate to the students
+</p>
+
+<h5>Payment Details</h5>
+<p>
+    Ref#: <label><input asp-for="RefNo" class="form-control" /></label>
+    <br>
+    Student: <label><select asp-for="StudentsId" class="form-control" asp-items="ViewBag.StudentsId"></select></label>
+    <br>
+    Amount:$ <label><select asp-for="DurationCostId" class="form-control" asp-items="ViewBag.DurationCostId"></select></label>
+</p>
+
+<p>
+    Please follow the link (insert link) to make payment for (Insert term, year)
+
+    Apply for your Sport Vouchers for (insert term, year), please visit "http://www.sportvoucher.nt.gov.au", as schools are no longer providing students with a sport voucher.
+</p>
+
+<p>Alternatively pay via Bank Transfer - EFT - CDU bank details, delete old bank details: </p>
+<p>
+    New Bank Details
+    <br>
+    Bank: <label><input asp-for="BankId" class="form-control" /></label>
+    <br>
+    Account Name: <label><input asp-for="AccName" class="form-control" /></label>
+    <br>
+    BSB Number: <label><input asp-for="BSBNo" class="form-control" /></label>
+    <br>
+    Account Number: <label><input asp-for="AccNo" class="form-control" /></label>
+    <br>
+    Reference number - please include 'CYCM, Reference number and student name'
+</p>
+
+<p>The CYCM is committed to providing students with quality lessons in a positive learning environment.</p>
+<p>
+    Regards,
+    <br>
+    <label><input asp-for="Signature" class="form-control" /></label>
+</p>
+
+<div class="form-group">
+    <input type="submit" value="Send" class="btn btn-primary" />
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
