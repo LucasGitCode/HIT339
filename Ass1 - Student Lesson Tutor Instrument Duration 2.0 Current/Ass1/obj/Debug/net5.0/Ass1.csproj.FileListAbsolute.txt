@@ -1162,4 +1162,13 @@ D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrume
 D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Instruments\Details.cshtml.g.cs
 D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Instruments\Edit.cshtml.g.cs
 D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Instruments\Index.cshtml.g.cs
-D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Lessons\Letter.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Letters\Create.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Letters\Delete.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Letters\Details.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Letters\Edit.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Letters\Index.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Invoices\Create.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Invoices\Delete.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Invoices\Details.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Invoices\Edit.cshtml.g.cs
+D:\Uni\HIT 339 Distributed Development\Ass1\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\Ass1\obj\Debug\net5.0\Razor\Views\Invoices\Index.cshtml.g.cs

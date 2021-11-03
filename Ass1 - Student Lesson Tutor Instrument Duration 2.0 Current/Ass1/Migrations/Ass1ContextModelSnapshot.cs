@@ -16,7 +16,7 @@ namespace Ass1.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Ass1.Models.DurationCost", b =>
@@ -50,6 +50,39 @@ namespace Ass1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Instrument");
+                });
+
+            modelBuilder.Entity("Ass1.Models.Invoice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AccName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AccNo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BSBNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BankId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Cost")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Term")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Invoice");
                 });
 
             modelBuilder.Entity("Ass1.Models.Lesson", b =>
@@ -97,25 +130,7 @@ namespace Ass1.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AccName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("AccNo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BSBNo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BankId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("DurationCostId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RefNo")
                         .HasColumnType("int");
 
                     b.Property<string>("Signature")
@@ -124,11 +139,8 @@ namespace Ass1.Migrations
                     b.Property<int>("StudentsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Term")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
+                    b.Property<bool>("paid")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

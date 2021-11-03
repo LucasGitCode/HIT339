@@ -25,5 +25,7 @@ namespace Ass1.Data
         public DbSet<Ass1.Models.DurationCost> DurationCost { get; set; }
 
         public DbSet<Ass1.Models.Letter> Letter { get; set; }
+
+        public DbSet<Ass1.Models.Invoice> Invoice { get; set; }
     }
 }

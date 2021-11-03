@@ -21,9 +21,15 @@ namespace Ass1.Controllers
 
         // GET: Lessons
         
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var ass1Context = _context.Lesson.Include(l => l.Students).Include(l => l.Instrument).Include(l => l.Tutor).Include(l => l.DurationCost);
+            var ass1Context = from a1 in _context.Lesson.Include(l => l.Students).Include(l => l.Instrument).Include(l => l.Tutor).Include(l => l.DurationCost)
+                              select a1;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                ass1Context = ass1Context.Where(s => s.Students.LastName.Contains(searchString));
+            }
             return View(await ass1Context.ToListAsync());
         }
 
@@ -42,7 +48,7 @@ namespace Ass1.Controllers
                 .Include(l => l.DurationCost)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (lesson == null)
-            {
+            {   
                 return NotFound();
             }
 
@@ -201,7 +207,6 @@ namespace Ass1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["StudentsId"] = new SelectList(_context.Student, "Id", "FullName", letter.StudentsId);
             return View(letter);
         }
     }

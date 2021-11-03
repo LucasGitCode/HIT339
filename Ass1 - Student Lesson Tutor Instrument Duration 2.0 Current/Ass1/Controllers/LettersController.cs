@@ -22,7 +22,9 @@ namespace Ass1.Controllers
         // GET: Letters
         public async Task<IActionResult> Index()
         {
-            var ass1Context = _context.Letter.Include(l => l.Students).Include(l => l.DurationCost);
+            var ass1Context = _context.Letter
+                .Include(l => l.Students)
+                .Include(l => l.DurationCost);
             return View(await ass1Context.ToListAsync());
         }
 
@@ -35,8 +37,6 @@ namespace Ass1.Controllers
             }
 
             var letter = await _context.Letter
-                .Include(l => l.Students)
-                .Include(l => l.DurationCost)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (letter == null)
             {
@@ -51,7 +51,6 @@ namespace Ass1.Controllers
         {
             ViewData["StudentsId"] = new SelectList(_context.Student, "Id", "FullName");
             ViewData["DurationCostId"] = new SelectList(_context.DurationCost, "Id", "Duration");
-            ViewData["Year"] = new SelectList(Enum.GetValues(typeof(YearType)));
             return View();
         }
 
@@ -70,7 +69,6 @@ namespace Ass1.Controllers
             }
             ViewData["StudentsId"] = new SelectList(_context.Student, "Id", "FullName", letter.StudentsId);
             ViewData["DurationCostId"] = new SelectList(_context.DurationCost, "Id", "Duration");
-            ViewData["Year"] = new SelectList(Enum.GetValues(typeof(YearType)));
             return View(letter);
         }
 
@@ -89,7 +87,6 @@ namespace Ass1.Controllers
             }
             ViewData["StudentsId"] = new SelectList(_context.Student, "Id", "FullName", letter.StudentsId);
             ViewData["DurationCostId"] = new SelectList(_context.DurationCost, "Id", "Duration");
-            ViewData["Year"] = new SelectList(Enum.GetValues(typeof(YearType)));
             return View(letter);
         }
 
@@ -127,7 +124,6 @@ namespace Ass1.Controllers
             }
             ViewData["StudentsId"] = new SelectList(_context.Student, "Id", "FullName", letter.StudentsId);
             ViewData["DurationCostId"] = new SelectList(_context.DurationCost, "Id", "Duration");
-            ViewData["Year"] = new SelectList(Enum.GetValues(typeof(YearType)));
             return View(letter);
         }
 
