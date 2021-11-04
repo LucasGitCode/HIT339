@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "paSkxg7sIbPO49ClOzA9T30A2DDkIO2vzO3spyASG49t7C18dSOMET+Wj37RvXpI3f7Rv20oSQI5I7A46ggOug==",
+  "dgSpecHash": "rSlZX8XNpBMhkqvtB5et1WHW7DMxfokwv6RJecA61ohn1Rxa423reyeE+Y9mftZt2Mm271CLVAb1CMdHaV2m7Q==",
   "success": true,
-  "projectFilePath": "D:\\Uni\\HIT 339 Distributed Development\\Ass1\\Ass1 - Student Lesson Tutor Instrument Duration 2.0 Current\\Ass1\\Ass1.csproj",
+  "projectFilePath": "D:\\Uni\\HIT 339 Distributed Development\\Ass1\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\Ass1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
