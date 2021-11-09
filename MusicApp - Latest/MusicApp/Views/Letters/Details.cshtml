@@ -1,0 +1,88 @@
+﻿@model MusicApp.Models.Letters
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Letters</h4>
+    <hr />
+    <p>
+        Dear @Html.DisplayFor(model => model.Students.FullName),
+    </p>
+    <p>
+        Welcome to all existing students and new students. @Html.DisplayFor(model => model.LessonTY.Term) will commence @Html.DisplayFor(model => model.LessonDT.StartDate).
+        Please ensure your payment is finalised by @Html.DisplayFor(model => model.LessonDT.EndDate). If a student is no longer attending lessons, please email the CYCM to be removed off the email list.
+    </p>
+    <p>
+        If paying by Bank Transfer - EFT, pleae forward a copy of your payment to the office, to follow up and allocate to the student.
+    </p>
+    <p>Payment Details:</p>
+    <p>Ref#: REFERENCE NUMBER</p>
+    <p>Student: @Html.DisplayFor(model => model.Students.FullName)</p>
+    <p>Amount: @Html.DisplayFor(model => model.Cost)</p>
+
+    <p>
+        Please follow "http://webpay.cdu.edu.au/musicschool/tran-type=006&REFNO=reference_number&CUSTNAME=lastname_firstname&PARENTSNAME=parents_name&UNITAMOUNTINCTAX=amount" to make payment for @Html.DisplayFor(model => model.LessonTY.Term), @Html.DisplayFor(model => model.LessonTY.Year).
+    </p>
+    <p>
+        Apply for your sport Vouchers for @Html.DisplayFor(model => model.Semester), @Html.DisplayFor(model => model.LessonTY.Year), please visit "http://www.sportvoucher.nt.gov.au", as schools are no longer providing students with sport vouchers.
+    </p>
+
+    <p>*Alternatively pay via Bank Transfer - EFT - CDU bank details, delete old bank details:*</p>
+
+    <p>New Bank Details:</p>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BSBNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BSBNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+    </dl>
+
+    <p>Reference number - please inlclude 'CYCM, Reference number and student name'</p>
+
+    <p>The CYCM is committed to providing students with quality lessons in a positive learning environment</p>
+
+    <dl class="row">
+        <dd class="col-sm-10">
+            Regards,
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Signature)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a value="Print" onClick="window.print()" asp-route-id="@Model.Id">Print</a> |
+    <a value="Send" onClick="window.print()" asp-route-id="@Model.Id">Send</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
