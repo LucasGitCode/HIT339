@@ -7261,20 +7261,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {}
+    "C:\\Users\\karld\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Uni\\HIT 339 Distributed Development\\Ass1\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\Ass1.csproj",
+      "projectUniqueName": "C:\\Users\\karld\\source\\repos\\HIT339\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\Ass1.csproj",
       "projectName": "Ass1",
-      "projectPath": "D:\\Uni\\HIT 339 Distributed Development\\Ass1\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\Ass1.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "D:\\Uni\\HIT 339 Distributed Development\\Ass1\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\obj\\",
+      "projectPath": "C:\\Users\\karld\\source\\repos\\HIT339\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\Ass1.csproj",
+      "packagesPath": "C:\\Users\\karld\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karld\\source\\repos\\HIT339\\Ass1 - Student Lesson Tutor Instrument Duration 4.0 Current - Copy\\Ass1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\karld\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

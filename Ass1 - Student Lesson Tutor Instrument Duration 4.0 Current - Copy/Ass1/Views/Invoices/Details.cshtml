@@ -1,0 +1,63 @@
+﻿@model Ass1.Models.Invoice
+
+@{ ViewData["Title"] = "Details"; }
+
+<h1>Invoice</h1>
+
+<div>
+    <hr />
+    <p>
+        Dear @Html.DisplayFor(model => model.AccName) <br />
+
+        Welcome to all existing students and new students. Semester @Html.DisplayFor(model => model.Term) will commence from @Html.DisplayFor(model => model.Date)
+        Please ensure your payment is finalised by payment_finaldate
+        If a student is no longer attending
+        lessons, please email the CYCM to be removed off the email list.
+        If paying by Bank Transfer- EFT, please forward a copy of your payment to the office, to follow up
+        and allocate to the student.
+    </p>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BankId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BankId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BSBNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BSBNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+    </dl>
+    <p>
+        Please follow hyperlink "http://webpay.cdu.edu.au/musicschool/tran-type=006&REFNO=reference_number&CUSTNAME=lastname_firstname&PARENTSNAME=parents_name&UNITAMOUNTINCTAX=amount"
+    </p>
+    <p>
+        Apply for your sport Vouchers for term @Html.DisplayFor(model => model.Term) and before @Html.DisplayFor(model => model.Date) please visit the hyperlink "http://www.sportvoucher.nt.gov.au", as schhols are no longer providing students with sport vouchers.
+    </p>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id"><input type="button" value="Edit" /></a> |
+    <input type="button" value="Print Invoice" onClick="window.print()">  |
+    <a asp-action="SendInvoice" asp-route-id="@Model.Id"><input type="button" value="Send Invoice"/></a>  |
+    <a asp-action="Index"><input type="button" value="Back to List" /></a>
+</div>
