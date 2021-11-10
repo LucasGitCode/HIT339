@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MusicApp.Models.Letters>
+
+@{
+    ViewData["Title"] = "Letter";
+}
+
+<h1>Letter</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Letters" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Students)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BSBNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Students.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BankId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BSBNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paid)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Invoice</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
