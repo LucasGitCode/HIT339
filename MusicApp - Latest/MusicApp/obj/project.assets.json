@@ -7149,19 +7149,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chens\\.nuget\\packages\\": {}
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Uni\\2021\\Semester 2\\HIT 339 Distributed Development\\Assignment 2\\MusicApp - Latest\\MusicApp\\MusicApp.csproj",
+      "projectUniqueName": "D:\\Uni\\HIT 339 Distributed Development\\Merge\\MusicApp - Latest\\MusicApp\\MusicApp.csproj",
       "projectName": "MusicApp",
-      "projectPath": "D:\\Uni\\2021\\Semester 2\\HIT 339 Distributed Development\\Assignment 2\\MusicApp - Latest\\MusicApp\\MusicApp.csproj",
-      "packagesPath": "C:\\Users\\chens\\.nuget\\packages\\",
-      "outputPath": "D:\\Uni\\2021\\Semester 2\\HIT 339 Distributed Development\\Assignment 2\\MusicApp - Latest\\MusicApp\\obj\\",
+      "projectPath": "D:\\Uni\\HIT 339 Distributed Development\\Merge\\MusicApp - Latest\\MusicApp\\MusicApp.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "D:\\Uni\\HIT 339 Distributed Development\\Merge\\MusicApp - Latest\\MusicApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\chens\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7226,7 +7226,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
